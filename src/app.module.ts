@@ -153,7 +153,7 @@ import { SurveyAttemptRepositoryImpl } from './domain/survey/repositories/survey
      * Database Integration with
      * Database Schema declarations
      */
-    MongooseModule.forRoot("mongodb://10.20.34.18:3000/kGateEnhancement?directConnection=true"!), //Server causing an issue with reading .env
+    MongooseModule.forRoot("mongodb+srv://rao:Golden123@reorank.gyhlll0.mongodb.net/?retryWrites=true&w=majority"!), //Server causing an issue with reading .env
     MongooseModule.forFeature([{ name: 'OU-Location', schema: OuLocationSchema, collection: 'locations' }]),
     MongooseModule.forFeature([{ name: 'OU-Category', schema: OuCategorySchema, collection: 'org-categories' }]),
     MongooseModule.forFeature([{ name: 'OU-Type', schema: OuTypeSchema, collection: 'org-types' }]),
