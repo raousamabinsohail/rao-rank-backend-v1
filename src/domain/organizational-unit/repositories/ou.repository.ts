@@ -679,7 +679,6 @@ export class OURepositoryImpl implements OURepository {
 
   //create Organizational unit Implementation
   public async create(ou: OrganizationalUnit): Promise<OrganizationalUnit> {
-
     if (!ou.id || ou.id == null) {
 
       let pipe = [
@@ -691,8 +690,10 @@ export class OURepositoryImpl implements OURepository {
         }
       ]
       let last = await this.ouModal.aggregate(pipe).exec();
+      console.log(last)
       if (last && last[0].id != null) {
-        ou.id = last[0].id + 1;
+        console.log('INSIDE LAST')
+        ou.id = last[0].id ? last[0].id + 1 : 0 ;
       } else {
         throw new Error('ID not fetched')
       }
