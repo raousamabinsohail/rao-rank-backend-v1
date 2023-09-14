@@ -202,12 +202,12 @@ import { SurveyAttemptRepositoryImpl } from './domain/survey/repositories/survey
      */
     MailerModule.forRoot({
       transport: {
-        host: "86.60.48.25",
-        secure: false,
-        port: 587,
+        host: "reorank.com",
+        secure: true,
+        port: 465,
         auth: {
-          user: "knowledgegate@bc.gov.sa",
-          pass: "welcome@BC1382023"
+          user: "admin@reorank.com",
+          pass: "golden125@"
         },
         tls: {
           // do not fail on invalid certs
@@ -215,7 +215,7 @@ import { SurveyAttemptRepositoryImpl } from './domain/survey/repositories/survey
         }
       },
       defaults: {
-        from: "knowledgegate@bc.gov.sa"
+        from: "admin@reorank.com"
       },
       template: {
         dir: join(__dirname, './dist/templates'),
