@@ -394,11 +394,11 @@ export class OURepositoryImpl implements OURepository {
           }
         }, {
           '$match': {
-            'type.name': {
-              '$in': [
-                'entity', 'ministry'
-              ]
-            }
+            // 'type.name': {
+            //   '$in': [
+            //     'entity', 'ministry'
+            //   ]
+            // }
           }
         }
       ])
